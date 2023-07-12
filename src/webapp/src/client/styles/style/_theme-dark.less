@@ -42,4 +42,33 @@ body.theme-dark {
             color: @theme-dark-label-color;
         }
     }
+
+    nav.navbar  {
+        ul.nav ul.dropdown-menu {
+            background-color: @theme-dark-content-color;
+            li a {
+                color: @theme-dark-label-color;
+                &:hover {
+                    background-color: @theme-dark-tr-hover-color;
+                }
+            }
+        }
+        li#user-nav-btn.open a.dropdown-toggle {
+            background: @theme-dark-content-color;
+            color: @theme-dark-label-color;
+        }
+        li#administration-nav-btn.open a.dropdown-toggle {
+            background: @theme-dark-content-color;
+            color: @theme-dark-label-color;
+            span {
+                filter: invert(94%) sepia(100%) saturate(24%) hue-rotate(53deg) brightness(105%) contrast(105%);;
+            }
+        }
+        div.popover-inner {
+            background-color: @theme-dark-bg-color;
+        }
+        a.notifications-settings-link {
+            filter: invert(94%) sepia(100%) saturate(24%) hue-rotate(53deg) brightness(105%) contrast(105%);
+        }
+    }
 }
