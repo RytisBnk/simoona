@@ -5,6 +5,7 @@
     "notifications_mainWallExplanation": "is your main wall. You cannot unsubscribe from it, notifications come once posted.",
     "notifications_listLabel": "Select how you want to get notifications",
     "time_zone": "Time Zone",
+    "appearance" : "Appearance",
     "wall": "Wall",
     "app": "Application",
     "email": "Email",
