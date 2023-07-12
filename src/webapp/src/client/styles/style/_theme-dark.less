@@ -19,9 +19,16 @@ body.theme-dark {
 
     div.panel-default {
         border-color: transparent;
+        div.event-widget-header, div.birthday-module-header {
+            background-color: @theme-dark-content-color;
+        }
     }
 
-    div.panel-heading {
+    div.event-widget p, div.birthday-module {
+        color: @theme-dark-label-color;
+    }
+
+    div.panel-heading, div.birthday-module-header, div.event-widget-header {
         border-bottom-color: @theme-dark-bg-color;
     }
 
