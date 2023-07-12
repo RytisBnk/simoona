@@ -1,0 +1,45 @@
+@theme-dark-bg-color : black;
+@theme-dark-content-color: #33322f;
+@theme-dark-input-color: darkgray;
+@theme-dark-label-color: lightgray;
+@theme-dark-tr-hover-color: #57646d;
+
+body.theme-dark {
+    background: @theme-dark-bg-color;
+
+    div.panel.panel-default, div.panel-heading, div.panel-tab-heading {
+        background: @theme-dark-content-color;
+        span {
+            color: @theme-dark-label-color;
+        }
+        select.form-control {
+            background: @theme-dark-input-color;
+        }
+    }
+
+    div.panel-default {
+        border-color: transparent;
+    }
+
+    div.panel-heading {
+        border-bottom-color: @theme-dark-bg-color;
+    }
+
+    div.panel-body form.form-horizontal table.nc-table.nc-table-active {
+        background-color: @theme-dark-content-color;
+        color: @theme-dark-label-color;
+        tr:hover {
+            background-color: @theme-dark-tr-hover-color;
+        }
+    }
+
+    label, h2 {
+        color: @theme-dark-label-color;
+    }
+
+    .sidebar-overlay-container {
+        a:not(.active), span.ng-scope {
+            color: @theme-dark-label-color;
+        }
+    }
+}
