@@ -3,6 +3,9 @@
 @theme-dark-input-color: darkgray;
 @theme-dark-label-color: lightgray;
 @theme-dark-tr-hover-color: #57646d;
+@theme-dark-post-reply-bg-color: #232320;
+@theme-dark-post-reply-footer-bg-color: #54534e;
+@theme-dark-element-border-color: #5e5d57;
 
 body.theme-dark {
     background: @theme-dark-bg-color;
@@ -76,6 +79,31 @@ body.theme-dark {
         }
         a.notifications-settings-link {
             filter: invert(94%) sepia(100%) saturate(24%) hue-rotate(53deg) brightness(105%) contrast(105%);
+        }
+    }
+
+    div.wall-body div.panel.panel-body {
+        background-color: @theme-dark-content-color;
+        border-color: transparent;
+        div.panel-footer-comment {
+            background-color: @theme-dark-post-reply-footer-bg-color;
+        }
+        p {
+            color: @theme-dark-label-color;
+        }
+        div.post-container {
+            background-color: @theme-dark-post-reply-bg-color;
+            border-top-color: @theme-dark-element-border-color;
+            textarea {
+                background-color: @theme-dark-input-color;
+            }
+            textarea::placeholder {
+                color: grey;
+            }
+            div.comment-container::after {
+                border-bottom-color: @theme-dark-element-border-color;
+                border-top-color: @theme-dark-element-border-color;
+            }
         }
     }
 }
