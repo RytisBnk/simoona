@@ -84,18 +84,24 @@ body.theme-dark {
 
     div.wall-body div.panel.panel-body {
         background-color: @theme-dark-content-color;
-        border-color: transparent;
+        border-color: @theme-dark-element-border-color;
         div.panel-footer-comment {
             background-color: @theme-dark-post-reply-footer-bg-color;
+            border-color: @theme-dark-element-border-color;
         }
         p {
             color: @theme-dark-label-color;
+        }
+        div.emoji-picker-container {
+            border-color: @theme-dark-element-border-color;
         }
         div.post-container {
             background-color: @theme-dark-post-reply-bg-color;
             border-top-color: @theme-dark-element-border-color;
             textarea {
-                background-color: @theme-dark-input-color;
+                background-color: @theme-dark-content-color;
+                border-color: @theme-dark-element-border-color;
+                color: @theme-dark-label-color;
             }
             textarea::placeholder {
                 color: grey;
@@ -104,6 +110,21 @@ body.theme-dark {
                 border-bottom-color: @theme-dark-element-border-color;
                 border-top-color: @theme-dark-element-border-color;
             }
+        }
+    }
+
+    div#wall-post-create {
+        textarea {
+            background-color: @theme-dark-content-color;
+            border-color: @theme-dark-element-border-color;
+            color: @theme-dark-label-color;
+        }
+        textarea::placeholder {
+            color: grey;
+        }
+        div.panel-footer-post {
+            background-color: @theme-dark-content-color;
+            border-color: @theme-dark-element-border-color;
         }
     }
 }
