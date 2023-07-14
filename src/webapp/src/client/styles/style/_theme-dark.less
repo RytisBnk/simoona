@@ -44,10 +44,6 @@ body.theme-dark {
         }
     }
 
-    label, h2 {
-        color: @theme-dark-label-color;
-    }
-
     .sidebar-overlay-container {
         a:not(.active), span.ng-scope {
             color: @theme-dark-label-color;
@@ -108,9 +104,6 @@ body.theme-dark {
                 border-color: @theme-dark-element-border-color;
                 color: @theme-dark-label-color;
             }
-            textarea::placeholder {
-                color: grey;
-            }
             div.comment-container::after {
                 border-bottom-color: @theme-dark-element-border-color;
                 border-top-color: @theme-dark-element-border-color;
@@ -124,23 +117,15 @@ body.theme-dark {
             border-color: @theme-dark-element-border-color;
             color: @theme-dark-label-color;
         }
-        textarea::placeholder {
-            color: grey;
-        }
         div.panel-footer-post {
             background-color: @theme-dark-content-color;
             border-color: @theme-dark-element-border-color;
         }
     }
 
-    div.event-list-item-container {
-        div.alert {
-            background-color: @theme-dark-content-color;
-            border-color: @theme-dark-element-border-color;
-        }
-        span {
-            color: @theme-dark-label-color;
-        }
+    div.alert {
+        background-color: @theme-dark-content-color;
+        border-color: @theme-dark-element-border-color;
     }
 
     div.event-list-item-inner-container, div.event-options {
@@ -154,15 +139,29 @@ body.theme-dark {
         }
     }
 
-    input, input:disabled, textarea {
+    input, 
+    input:disabled, 
+    textarea {
         background-color: @theme-dark-input-color;
+        &::placeholder {
+            color: grey;
+        }
     }
 
-    h3, p:not(.customization-option-title), button.close {
+    h3, 
+    p:not(.customization-option-title), 
+    button.close, 
+    span:not(.glyphicon),
+    label,
+    h2 {
         color: @theme-dark-label-color;
     }
 
     a.customization-option:hover {
         background-color: @theme-dark-tr-hover-color;
+    }
+
+    div.panel-form-body {
+        color: @theme-dark-label-color;
     }
 }
