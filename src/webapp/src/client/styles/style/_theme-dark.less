@@ -158,7 +158,11 @@ body.theme-dark {
         background-color: @theme-dark-input-color;
     }
 
-    h3, p, button.close {
+    h3, p:not(.customization-option-title), button.close {
         color: @theme-dark-label-color;
+    }
+
+    a.customization-option:hover {
+        background-color: @theme-dark-tr-hover-color;
     }
 }
