@@ -6,6 +6,7 @@
 @theme-dark-post-reply-bg-color: #232320;
 @theme-dark-post-reply-footer-bg-color: #54534e;
 @theme-dark-element-border-color: #5e5d57;
+@theme-dark-content-darker-color: @theme-dark-post-reply-bg-color;
 
 body.theme-dark {
     background: @theme-dark-bg-color;
@@ -21,7 +22,7 @@ body.theme-dark {
     }
 
     div.panel-default {
-        border-color: transparent;
+        border-color: @theme-dark-element-border-color;
         div.event-widget-header, div.birthday-module-header {
             background-color: @theme-dark-content-color;
         }
@@ -56,6 +57,7 @@ body.theme-dark {
     nav.navbar  {
         ul.nav ul.dropdown-menu {
             background-color: @theme-dark-content-color;
+            border-color: @theme-dark-element-border-color;
             li a {
                 color: @theme-dark-label-color;
                 &:hover {
@@ -88,6 +90,9 @@ body.theme-dark {
         div.panel-footer-comment {
             background-color: @theme-dark-post-reply-footer-bg-color;
             border-color: @theme-dark-element-border-color;
+        }
+        div.like-button-selections {
+            background-color: @theme-dark-content-color;
         }
         p {
             color: @theme-dark-label-color;
@@ -126,5 +131,34 @@ body.theme-dark {
             background-color: @theme-dark-content-color;
             border-color: @theme-dark-element-border-color;
         }
+    }
+
+    div.event-list-item-container {
+        div.alert {
+            background-color: @theme-dark-content-color;
+            border-color: @theme-dark-element-border-color;
+        }
+        span {
+            color: @theme-dark-label-color;
+        }
+    }
+
+    div.event-list-item-inner-container, div.event-options {
+        background-color: @theme-dark-content-color;
+        border-color: @theme-dark-element-border-color;
+        div.modal-header, div.modal-footer {
+            background-color: @theme-dark-content-darker-color;
+            border-color: @theme-dark-element-border-color;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    input, input:disabled, textarea {
+        background-color: @theme-dark-input-color;
+    }
+
+    h3, p, button.close {
+        color: @theme-dark-label-color;
     }
 }
