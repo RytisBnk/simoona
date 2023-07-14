@@ -7,6 +7,9 @@
 @theme-dark-post-reply-footer-bg-color: #54534e;
 @theme-dark-element-border-color: #5e5d57;
 @theme-dark-content-darker-color: @theme-dark-post-reply-bg-color;
+@theme-dark-blue: #0076bb; // left as original color
+@theme-dark-green: #73b31b; // left as original color
+@theme-dark-lighter-blue: #1e8ac7; // left as original color
 
 body.theme-dark {
     background: @theme-dark-bg-color;
@@ -123,9 +126,24 @@ body.theme-dark {
         }
     }
 
-    div.alert {
+    div.alert, 
+    div.tab-content, 
+    div.user-info-modal,
+    div.kudos-committee-modal {
         background-color: @theme-dark-content-color;
         border-color: @theme-dark-element-border-color;
+    }
+
+    div.tab-content {
+        border-bottom-color: @theme-dark-blue;
+    }
+
+    div.user-info-modal {
+        border-bottom-color: @theme-dark-green;
+    }
+
+    div.kudos-committee-modal {
+        border-bottom-color: @theme-dark-lighter-blue;
     }
 
     div.event-list-item-inner-container, div.event-options {
@@ -148,12 +166,11 @@ body.theme-dark {
         }
     }
 
-    h3, 
+    h2, h3, h4, 
     p:not(.customization-option-title), 
     button.close, 
     span:not(.glyphicon),
-    label,
-    h2 {
+    label {
         color: @theme-dark-label-color;
     }
 
