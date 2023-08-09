@@ -77,7 +77,7 @@
         }
 
         function getSelectedTheme() {
-            return localStorage.getItem("settings.theme.id");
+            return localStorage.getItem("settings.theme.id") ? localStorage.getItem("settings.theme.id") : 'theme-default';
         }
 
         function saveThemeSelection(selectedThemeId) {

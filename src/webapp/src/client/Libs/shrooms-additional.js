@@ -9,7 +9,7 @@ $(document).on('click', '.nc-table-active tbody tr', function(e) {
 
 $(document).ready(function() {
     let themeId = localStorage.getItem("settings.theme.id");
-    if (themeId == "theme-dark") {
+    if (themeId === "theme-dark") {
         $('body').addClass("theme-dark");
     }
 });
