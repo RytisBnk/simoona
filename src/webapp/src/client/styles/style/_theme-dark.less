@@ -16,11 +16,8 @@ body.theme-dark {
 
     div.panel.panel-default, div.panel-heading, div.panel-tab-heading {
         background: @theme-dark-content-color;
-        span {
+        span:not([data-test-id="create-event-header"]) {
             color: @theme-dark-label-color;
-        }
-        select.form-control {
-            background: @theme-dark-input-color;
         }
     }
 
@@ -114,6 +111,24 @@ body.theme-dark {
         }
     }
 
+    div.wall-member-card,
+    table,
+    ul.uib-datepicker-popup,
+    ul.nav.second-level li a:focus {
+        background-color: @theme-dark-content-color;
+    }
+
+    ul.uib-datepicker-popup {
+        background-color: @theme-dark-content-color;
+        border-color: @theme-dark-element-border-color;
+        button:hover {
+            background-color: @theme-dark-tr-hover-color !important;
+        }
+        button.uib-right, button.uib-left {
+            filter: invert(94%) sepia(100%) saturate(24%) hue-rotate(53deg) brightness(105%) contrast(105%);
+        }
+    }
+
     div#wall-post-create {
         textarea {
             background-color: @theme-dark-content-color;
@@ -134,7 +149,7 @@ body.theme-dark {
         border-color: @theme-dark-element-border-color;
     }
 
-    div.tab-content {
+    div.kudos-content-body {
         border-bottom-color: @theme-dark-blue;
     }
 
@@ -149,18 +164,27 @@ body.theme-dark {
     div.event-list-item-inner-container, div.event-options {
         background-color: @theme-dark-content-color;
         border-color: @theme-dark-element-border-color;
-        div.modal-header, div.modal-footer {
-            background-color: @theme-dark-content-darker-color;
-            border-color: @theme-dark-element-border-color;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-        }
+    }
+
+    div.modal-header, div.modal-footer {
+        background-color: @theme-dark-content-darker-color;
+        border-color: @theme-dark-element-border-color;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    div.modal-body, div.modal-content {
+        background-color: @theme-dark-content-color;
     }
 
     input, 
     input:disabled, 
-    textarea {
-        background-color: @theme-dark-input-color;
+    textarea,
+    select.form-control,
+    div.tags {
+        background-color: @theme-dark-content-color;
+        border-color: @theme-dark-element-border-color;
+        color: @theme-dark-label-color;
         &::placeholder {
             color: grey;
         }
@@ -169,16 +193,59 @@ body.theme-dark {
     h2, h3, h4, 
     p:not(.customization-option-title), 
     button.close, 
-    span:not(.glyphicon),
-    label {
+    span:not(.glyphicon):not([translate="wall.feed"]):not([translate="wall.members"]),
+    label,
+    div.wall-header-description,
+    strong, small {
         color: @theme-dark-label-color;
     }
 
-    a.customization-option:hover {
+    option {
+        color: @theme-dark-label-color;
+    }
+
+    a.customization-option:hover,
+    div.panel.ng-isolate-scope div.panel-heading h4.panel-title a.accordion-toggle:hover {
         background-color: @theme-dark-tr-hover-color;
+        border-color: @theme-dark-element-border-color;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    div.panel.ng-isolate-scope div.panel-heading h4.panel-title:hover {
+        -webkit-box-shadow: none;
+        box-shadow: none;
     }
 
     div.panel-form-body {
         color: @theme-dark-label-color;
+    }
+
+    div.ng-isolate-scope.panel {
+        background-color: @theme-dark-content-color;
+    }
+
+    div.panel-group,
+    a.accordion-toggle:hover {
+        border-color: @theme-dark-element-border-color;
+    }
+
+    table.table.table-grey thead tr th,
+    table.table.table-grey tbody tr td,
+    table.table,
+    table.nc-table {
+        background-color: @theme-dark-content-darker-color;
+        border-color: @theme-dark-element-border-color;
+    }
+
+    table.table.table-grey tbody tr td,
+    table.nc-table tbody tr td {
+        color: @theme-dark-label-color;
+    }
+
+    .nc-table > thead > tr > th:first-child, .nc-table > tbody > tr > td:first-child,
+    .nc-table > thead > tr > th, .nc-table > tbody > tr:last-child > td,
+    .nc-table > thead > tr > th {
+        border-color: @theme-dark-element-border-color;
     }
 }
